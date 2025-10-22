@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+h1{
+    display: block;
+    font-weight: bold;
+    font-size: 80px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    color: #003366;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+.container{
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+.box{
+    border-radius: 30px;
+    height: 200px;
+    width: 200px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.25);
+    color: #002366;
+    font-weight: bold;
+    font-size: 90px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#restart{
+    margin: 30px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width:100px;
+    font-size: 20px;
+    background-color: rgba(0, 98, 255, 0.817);
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #007bff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+#restart:hover {
+    background-color: #0056b3;
+}
+#popup{
+    height: 300px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: none;          /* hidden by default */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    animation: pop 0.3s ease;
+    animation: pop 0.4s ease;
+    background: linear-gradient(145deg, #ffffff, #dfe9f3);
+    border: none;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+#close{
+    position: absolute;
+    top: 17px;       /* space from top */
+    left: 13px; 
+    border: none;
+    background-color: white;
+    font-size: 22px;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    background: transparent;
+    transition: 0.2s;
+}
+#close:hover {
+    transform: scale(1.2);
+    color: darkred;
+}
+
+#result {
+    font-size: 30px;
+    font-weight: bold;
+    color: #002147;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* ===== Extra styling to make it look modern ===== */
+
+h1:hover {
+    transform: scale(1.05);
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+#restart:hover {
+    transform: scale(1.1);
+}
+
+@keyframes pop {
+    from {
+        transform: translate(-50%, -50%) scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
